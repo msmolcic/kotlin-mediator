@@ -1,7 +1,7 @@
 package com.msmolcic.mediator.pipeline
 
-import kotlinx.coroutines.Deferred
 import com.msmolcic.mediator.PipelineBehavior
+import kotlinx.coroutines.Deferred
 
 /**
  * Behavior for executing all RequestPreProcessor{TRequest,TResponse} instances before handling the request.

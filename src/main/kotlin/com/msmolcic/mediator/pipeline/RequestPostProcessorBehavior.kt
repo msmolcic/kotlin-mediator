@@ -1,8 +1,8 @@
 package com.msmolcic.mediator.pipeline
 
+import com.msmolcic.mediator.PipelineBehavior
 import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.Deferred
-import com.msmolcic.mediator.PipelineBehavior
 
 /**
  * Behavior for executing all RequestPostProcessor{TRequest,TResponse} instances after handling the request.

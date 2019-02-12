@@ -1,12 +1,12 @@
 package com.msmolcic.mediator
 
-import kotlinx.coroutines.CompletableDeferred
-import kotlinx.coroutines.Deferred
-import kotlinx.coroutines.runBlocking
 import com.msmolcic.mediator.internal.MediatorNotificationHandlerWrapper
 import com.msmolcic.mediator.internal.MediatorRequestHandlerWrapper
 import com.msmolcic.mediator.internal.NotificationHandlerWrapper
 import com.msmolcic.mediator.internal.RequestHandlerWrapper
+import kotlinx.coroutines.CompletableDeferred
+import kotlinx.coroutines.Deferred
+import kotlinx.coroutines.runBlocking
 import java.lang.reflect.Type
 import java.util.concurrent.ConcurrentHashMap
 

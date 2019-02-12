@@ -1,10 +1,10 @@
 package com.msmolcic.mediator.internal
 
-import kotlinx.coroutines.Deferred
 import com.msmolcic.mediator.Notification
 import com.msmolcic.mediator.NotificationHandler
 import com.msmolcic.mediator.ServiceFactory
 import com.msmolcic.mediator.getInstances
+import kotlinx.coroutines.Deferred
 
 internal class MediatorNotificationHandlerWrapper<TNotification : Notification> : NotificationHandlerWrapper() {
     companion object {
