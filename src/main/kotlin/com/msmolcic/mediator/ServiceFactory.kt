@@ -1,4 +1,4 @@
-package mediator
+package com.msmolcic.mediator
 
 import java.lang.reflect.Type
 

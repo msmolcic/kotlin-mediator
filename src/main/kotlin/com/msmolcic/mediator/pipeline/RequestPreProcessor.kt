@@ -1,4 +1,4 @@
-package mediator.pipeline
+package com.msmolcic.mediator.pipeline
 
 import kotlinx.coroutines.Deferred
 

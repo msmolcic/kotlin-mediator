@@ -1,4 +1,4 @@
-package mediator
+package com.msmolcic.mediator
 
 /**
  * Marker interface to represent a notification.

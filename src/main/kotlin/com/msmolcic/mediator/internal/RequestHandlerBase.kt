@@ -1,7 +1,7 @@
-package mediator.internal
+package com.msmolcic.mediator.internal
 
-import mediator.ServiceFactory
-import mediator.getInstance
+import com.msmolcic.mediator.ServiceFactory
+import com.msmolcic.mediator.getInstance
 import java.lang.Exception
 import java.lang.IllegalStateException
 

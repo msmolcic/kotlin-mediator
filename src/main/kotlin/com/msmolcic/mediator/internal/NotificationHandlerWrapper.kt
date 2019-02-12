@@ -1,8 +1,8 @@
-package mediator.internal
+package com.msmolcic.mediator.internal
 
 import kotlinx.coroutines.Deferred
-import mediator.Notification
-import mediator.ServiceFactory
+import com.msmolcic.mediator.Notification
+import com.msmolcic.mediator.ServiceFactory
 
 internal typealias PublishDelegate = (Iterable<() -> Deferred<Unit>>) -> Deferred<Unit>
 
