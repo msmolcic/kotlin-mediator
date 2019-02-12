@@ -26,12 +26,10 @@ open class MediatorBehavior(
      */
     override suspend fun <TResponse> sendAsync(request: Request<TResponse>): Deferred<TResponse> {
         requireNotNull(request) { "Request can't be null." }
-
         val requestType = request.javaClass
         val handler = requestHandlers.getOrPut(requestType) {
             MediatorRequestHandlerWrapper<Request<TResponse>, TResponse>()
         } as RequestHandlerWrapper<TResponse>
-
         return handler.handleAsync(request, serviceFactory)
     }
 
@@ -40,7 +38,6 @@ open class MediatorBehavior(
      */
     override suspend fun <TNotification : Notification> publishAsync(notification: TNotification): Deferred<Unit> {
         requireNotNull(notification) { "Notification can't be null." }
-
         return publishNotificationAsync(notification)
     }
 
@@ -50,7 +47,6 @@ open class MediatorBehavior(
     override suspend fun publishAsync(notification: Any): Deferred<Unit> {
         requireNotNull(notification) { "Notification can't be null." }
         require(notification is Notification) { "Notification does not implement Notification interface." }
-
         return publishNotificationAsync(notification)
     }
 

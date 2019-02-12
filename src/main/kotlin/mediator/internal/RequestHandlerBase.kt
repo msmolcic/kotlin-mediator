@@ -3,22 +3,26 @@ package mediator.internal
 import mediator.ServiceFactory
 import mediator.getInstance
 import java.lang.Exception
+import java.lang.IllegalStateException
 
 internal abstract class RequestHandlerBase {
     companion object {
         inline fun <reified THandler> getHandler(factory: ServiceFactory): THandler {
             var handler: THandler
-
             try {
                 handler = factory.getInstance()
             } catch (e: Exception) {
-                TODO("Throw invalid operation exception.")
+                throw IllegalStateException(
+                    """Error constructing handler for request of type ${THandler::class.java}.
+                    | Register your handlers with the container. See the samples in GitHub for examples.""".trimMargin()
+                )
             }
-
             if (handler == null) {
-                TODO("Throw invalid operation exception.")
+                throw IllegalStateException(
+                    """Handler was not found for request of type ${THandler::class.java}.
+                    | Register your handlers with the container. See the samples in GitHub for examples.""".trimMargin()
+                )
             }
-
             return handler
         }
     }
